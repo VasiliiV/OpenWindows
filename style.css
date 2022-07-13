@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    border-radius: 9px;
+    height: 30px;
+    width: 180px;
+    margin: 20px;
+}
+.big-background {
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: #564a3759;
+}
+.big-background--open {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+} 
+.modal-contant {
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: anim--open 3s;  
+}
+.modal_close {
+    position: absolute;
+    top: -55px;
+    right: -20px;
+    font-size: 25px;
+    cursor: pointer;
+    animation: anim--open--x 7s;
+}
+
+#modal-contant--close {
+    animation-name: amin--close 5s;
+}
+
+@keyframes anim--open {
+    from {
+        opacity: 0;
+        left: 70px;
+    }
+    to {
+        opacity: 1;
+        left: 0px;
+    }
+}
+@keyframes anim--open--x {
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+/* Анимации на закрытие */
+
+@keyframes amin--close {
+    from {
+        opacity: 1;
+        left: 0px;
+    }
+    to {
+        opacity: 0;
+        left: 70px;
+    }
+}
+@keyframes amin--close {
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        
+    }
+}
